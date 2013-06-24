@@ -54,6 +54,5 @@ Issues:
 
 TODO:
 -----
-* add code to daemonize
 * add option to check files in format /path/to/file/dhcpd-%D%m%y.log
 * create init script 
