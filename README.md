@@ -30,7 +30,7 @@ around 200.000 clients with variable lease time (around 1000 messages/second).
     
 
 
-#### Example usage client:
+#### Example usage http client:
 
     $ wget -t1  -O- 127.0.0.1:8080 -q
     {
@@ -40,6 +40,12 @@ around 200.000 clients with variable lease time (around 1000 messages/second).
          "discover": 2829,
          "offer": 0
      }
+
+
+#### Example usage cacti script:
+
+    $ ./cacti_script.py 
+    ACK:0 DISCOVER:0 NAK:0 OFFER:0 REQUEST:0
 
 
 #### Issues:
