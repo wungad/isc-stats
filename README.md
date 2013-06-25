@@ -13,13 +13,13 @@ Python standard library (>=2.6)
 
 #### Configuration options
 
-> Usage: isc_stats.py [-a address] [-p port] [-f file] [-b] [-d] [-h]
-> 	-a or --address, ip address to listen on (default 127.0.0.1)
-> 	-p or --port, tcp port to listen on (default 8080)
-> 	-f or --file, isc dhcp log file location (default /var/log/dhcpd.log)
-> 	-b or --background, run in background (default foreground)
-> 	-d or --debug, print debug messages
-> 	-h or --help, prints this help message
+    Usage: isc_stats.py [-a address] [-p port] [-f file] [-b] [-d] [-h]
+     	-a or --address, ip address to listen on (default 127.0.0.1)
+     	-p or --port, tcp port to listen on (default 8080)
+     	-f or --file, isc dhcp log file location (default /var/log/dhcpd.log)
+     	-b or --background, run in background (default foreground)
+     	-d or --debug, print debug messages
+     	-h or --help, prints this help message
 
 
 #### Example usage server:
