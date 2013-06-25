@@ -339,8 +339,8 @@ for option in App.options[0]:
     (opt, val) = option
     if opt in ['-a', '--address']: App.ip = val
     elif opt in ['-p', '--port']: App.port = int(val)
-    elif opt in ['-f', '--file']: App.isclog = val
-    elif opt in ['-l', '--log']: App.logfile = val
+    elif opt in ['-f', '--file']: App.isclog = os.path.abspath(val)
+    elif opt in ['-l', '--log']: App.logfile = os.path.abspath(val)
     elif opt in ['-b', '--background']: App.daemon = True
     elif opt in ['-d', '--debug']: App.debug = True
     elif opt in ['-h', '--help']: App.usage()
