@@ -135,7 +135,7 @@ class Log(object):
             sys.stderr.flush()
 
 
-class StatsHandler(SocketServer.StreamRequestHandler):
+class StatsHandler(SocketServer.BaseRequestHandler):
     '''
     Instantiated for every HTTP request passed to server
     '''
@@ -169,7 +169,9 @@ class StatsHandler(SocketServer.StreamRequestHandler):
 
         payload += http['content']
 
-        self.wfile.write(payload)
+        sent = self.request.send(payload)
+        self.request.shutdown(socket.SHUT_RDWR)
+        Log.debug('[serverThread] Sent %d bytes to %s on port %d' % (sent, self.client_address[0], self.client_address[1]))
 
 
 class StatsServer(SocketServer.ThreadingTCPServer):
