@@ -1,5 +1,4 @@
-ISC DHCP messages counter written in python
-============================================
+#### ISC DHCP messages counter written in python
 
 This application watches ISC DHCP logfile for DISCOVER/OFFER/REQUEST/ACK/NAK messages
 and listens on given TCP port for incoming connections to report the the statistics to
@@ -7,8 +6,7 @@ web clients in JSON format.
 I have written this to monitor the number of messages for our production servers which serve
 around 200.000 clients with variable lease time (around 1000 messages/second).
 
-Requirements:
-------------
+##### Requirements:
 
 Python standard library (>=2.6)
 
