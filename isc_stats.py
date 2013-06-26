@@ -351,7 +351,8 @@ App.daemon and App.daemonize()
 # socket: setup
 Log.debug('[mainThread] Instantiating server...')
 App.addr = (App.ip, App.port)
-App.server = StatsServer(App.addr, StatsHandler)
+try: App.server = StatsServer(App.addr, StatsHandler)
+except socket.error, e: Log.fatal('Failed to start server on %s port %d: %s' % (App.ip, App.port, e[1]))
 
 # thread: server
 Log.debug('[mainThread] Instantiating Server thread...')
