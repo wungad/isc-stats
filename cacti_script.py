@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import urllib
 import json
-
+import sys
 
 class Cacti(object):
     '''
@@ -38,13 +38,9 @@ class App(object):
         finally:
             Cacti.print_dict(App.stats_dict)
         
-#----------------------------#
-# replace this with your url # 
-#----------------------------#
-App.stats_url = 'http://127.0.0.1:8080/'
-
-
 if __name__ == '__main__':
 
+    try: App.stats_url = sys.argv[1]
+    except IndexError: sys.exit('Usage: %s <stats-daemon-url>' % __file__)
     App.main()
 

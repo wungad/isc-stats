@@ -310,7 +310,7 @@ class ParserThread(threading.Thread):
                 if Line.discover(line):
                     App.stats['discover'] += 1
                 elif Line.offer(line):
-                    App.stats['discover'] += 1
+                    App.stats['offer'] += 1
                 elif Line.request(line):
                     App.stats['request'] += 1
                 elif Line.ack(line):
